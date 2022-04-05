@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: green; */
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.menu {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    left: -200px;
+    transition: all 500ms linear;
+}
+
+.menu.active{
+    left: 0;
+}
+
+.icon{
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    transition: all 500ms linear;
+}
+
+.icon.slide{
+    left: 210px;
+    transition: all 500ms linear;
+}
+
+
+.icon span{
+    display: block;
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    margin: 3px; 
+}

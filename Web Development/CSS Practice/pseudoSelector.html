@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pseudo Selector</title>
+  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style media="screen">
+    body{
+      margin: 0px;
+      padding: 0px;
+      background-color: black;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+    header::before{
+      background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.5;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+    }
+    li{
+      padding: 4px;
+    }
+    section::before{
+      /* content: "this is a content" */
+    }
+    section{
+      margin: 3px 23px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      /* border: 2px solid red; */
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1{
+      font-size: 3rem;
+    }
+
+  </style>
+  <body>
+      <header>
+        <nav class="container">
+        <ul>
+          <li class="box" id="item1">Home</li>
+          <li class="box" id="item2">About</li>
+          <li class="box" id="item3">Services</li>
+          <li class="box" id="item4">Contact Us</li>
+        </ul>
+        </nav>
+      </header>
+      <section>
+        <h1>This is pseudo selector tutorial.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+
+  </body>
+</html>

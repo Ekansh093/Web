@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Max Fitness</title>
+  </head>
+  <style>
+    body {
+      background: url("images/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
+      background-repeat: no-repeat;
+      background-size: auto;
+      font-family: sans-serif;
+      /* padding-top: 50px; */
+    }
+    .left {
+      width: 85px;
+      height: 100px;
+      /* border: 2px solid red; */
+      position: absolute;
+      left: 40px;
+      top: 10px;
+    }
+    .left img {
+      width: 85px;
+      height: 80px;
+      margin: auto;
+    }
+    .left p {
+      margin: 0;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+    }
+    .mid {
+      width: 25px;
+      height: 25px;
+      /* border: 2px solid red; */
+      margin: auto;
+      width: 45%;
+      margin-top: 15px;
+    }
+
+    .mid ul {
+      list-style: none;
+      overflow: auto;
+      margin: 0;
+    }
+    .mid li {
+      float: left;
+      margin: 0 10px;
+      padding: 3px 10px;
+    }
+
+    .mid li a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+
+    .mid li a.active,
+    .mid li a:hover {
+      text-decoration: underline;
+    }
+
+    .right {
+      width: 200px;
+      height: 25px;
+      /* border: 2px solid red; */
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      padding: 2px;
+    }
+    .btn {
+      margin: 3px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .btn:hover {
+      /* color: grey; */
+      background-color: grey;
+      cursor: pointer;
+    }
+    .container {
+      display: block;
+      width: 60%;
+      border: 2px solid grey;
+      border-radius: 10px;
+      margin: auto;
+      position: absolute;
+      top: 200px;
+      left: 20%;
+      padding: 20px;
+    }
+
+    .form-group input {
+      display: block;
+      margin: auto;
+      width: 60%;
+      margin-top: 10px;
+      font-size: 20px;
+      text-align: center;
+      border: 1px solid white;
+      border-radius: 10px;
+    }
+
+    .container button {
+      display: block;
+      margin: auto;
+      width: 60%;
+      color: white;
+      background-color: black;
+      margin-top: 10px;
+      font-size: 20px;
+      text-align: center;
+      border: 1px solid white;
+      border-radius: 10px;
+    }
+  </style>
+
+  <body>
+    <div class="left">
+      <img src="images/logo.jpg" alt="">
+      <p>
+        <strong>Max Fitness</strong>
+      </p>
+    </div>
+    <div class="mid">
+      <ul>
+        <li>
+          <a href="#" class="active">Home</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li>
+          <a href="#">Fitness Calculator</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <button class="btn">Call Us Now</button>
+      <button class="btn">Email Us</button>
+    </div>
+    <div class="container">
+      <form class="form-group" action="index1.html" method="post">
+        <div>
+          <input type="text" name="" placeholder="Enter your Name">
+        </div>
+        <div>
+          <input type="text" name="" placeholder="Enter your Age">
+        </div>
+        <div>
+          <input type="text" name="" placeholder="Enter your Gender">
+        </div>
+        <div>
+          <input type="text" name="" placeholder="Enter your Address">
+        </div>
+        <div>
+          <button type="submit" name="button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

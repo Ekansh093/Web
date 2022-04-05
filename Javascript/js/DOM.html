@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0;
+    }
+    .nav-bar{
+        padding: 15px;
+        font-weight: bold;
+        background-color: red;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .box{
+        width: 90px;
+        height: 100px;
+        background-color: red;
+    }
+
+    #area{
+        background: blue;
+        height: 200px;
+        padding: 50px;
+    }
+</style>
+<body id="body">
+    <!-- <nav class="nav-bar">
+        <h1 id="title">Navigation bar</h1>
+    </nav> -->
+
+    <h1 id="title">Welcome to DOM tut</h1>
+    <!-- <ul id="myList">
+        <li>Apple</li>
+        <li id="insertBefore">Orange</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+    </ul>
+    <ul id="myList">
+        <li>Apple</li>
+        <li id="insertBefore">Orange</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+    </ul>
+    <ul id="myList">
+        <li>Apple</li>
+        <li id="insertBefore">Orange</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+    </ul>
+    <ul id="myList">
+        <li>Apple</li>
+        <li id="insertBefore">Orange</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+    </ul>
+    <ul id="myList">
+        <li>Apple</li>
+        <li id="insertBefore">Orange</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+    </ul> -->
+
+    <!-- <div id="dataDiv" data-name="Ekansh" data-started-coding-at=18 >
+        Dataset div
+    </div>
+
+    <div class="box"></div>
+
+
+    <div id="ancestor">
+        <p id="parent">Lorem ipsum dolor sit <strong id="child">amet</strong>, consectetur adipisicing elit. Adipisci accusantium maiores quae ipsum iste. Similique iure repellat quis architecto earum sapiente id quasi labore, vel, veniam nisi sit officia accusamus.</p>
+    </div> -->
+
+
+    <!-- <iframe src="./content.html" frameborder="1" style="width: 600px;height: 200px;"></iframe> -->
+<!-- 
+    <p id="mypara" data-name="Ekansh">Lorem ipsum dolor sit amet          consectetur <em>text</em> <strong>testing</strong></p>
+
+    <div id="area">
+        some text
+    </div> -->
+
+    <!-- <ul id="mylist">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In soluta aperiam voluptates saepe hic eius consectetur cumque, harum officiis. Id, quasi. Totam voluptatibus tempora similique quod sed provident quae officia.</p>
+    </ul> -->
+
+    <div id="mydiv">
+
+    </div>
+
+    <code>test</code>
+
+</body>
+</html>
+
+<script>
+
+
+// createElement()
+
+// const element = document.createElement('div');
+
+// console.dir(element);
+
+//=============================================================
+
+// setAttribute()
+
+// element.setAttribute('class','firstDiv')
+
+// console.log(element);
+
+//=============================================================
+
+// textContent and innerHTML
+
+// const ele = document.getElementById('title')
+
+// ele.textContent = "Welcome to India"
+
+// ele.innerHTML = "<em>Welcome to India</em>"
+
+//=============================================================
+
+// appendChild()
+
+// const fruitList = ['Mango', 'Banana', 'Apple', 'Orange'];
+
+// let fruitListEle = document.getElementById('myList');
+
+// for(fruit of fruitList){
+//     let fruitEle = document.createElement('li');
+//     fruitEle.textContent = fruit
+//     fruitListEle.appendChild(fruitEle)
+// }
+
+//=============================================================
+
+// Document Fragment
+
+// const myList = document.getElementById('myList');
+
+// const ele1 = document.createElement('li');
+// const ele2 = document.createElement('li');
+// const docFrag = document.createDocumentFragment();
+
+// ele1.textContent = "Apple";
+// ele2.textContent = "Mango";
+
+// docFrag.appendChild(ele1);
+// docFrag.appendChild(ele2);
+
+// console.log(docFrag);
+
+// myList.appendChild(docFrag);
+
+// console.log(docFrag);
+
+//=============================================================
+
+// classList - add, remove, replace, toggle, contains
+
+// const myList = document.getElementById('myList');
+
+// myList.classList.add('red-bg', 'big-font');
+// myList.classList.remove('red-bg');
+// myList.classList.replace('red-bg','blue-bg');
+// myList.classList.toggle('red-bg');
+// myList.classList.contains('red-bg');  // returns boolean
+
+//=============================================================
+
+// Dataset
+
+// const dataDiv = document.getElementById('dataDiv');
+
+// console.log(dataDiv.dataset);
+// console.log(dataDiv.dataset.name);
+// console.log(dataDiv.dataset.startedCodingAt);
+
+// dataDiv.removeAttribute('data-name')
+
+//=============================================================
+
+// insertBefore()
+
+// const myList = document.getElementById('myList');
+// const insertBefore = document.getElementById('insertBefore');
+
+// const smallH2 = document.createElement('li');
+// smallH2.textContent = "Inserted before";
+
+// myList.insertBefore(smallH2, insertBefore);
+
+//=============================================================
+
+// Node.cloneNode()
+
+// const myList = document.getElementById('myList');
+
+// const childrenNodes = myList.children;
+// const apple = childrenNodes[0];
+
+// const appleCopy = apple.cloneNode(true); // passing true means deep clone, i.e., deep clone will copy children nodes also.
+// myList.appendChild(appleCopy);
+
+//=============================================================
+
+// Node.nextElementSibling() - refers to next element node, nextSibling()- refers to the immediate next node
+
+
+// const navBar = document.querySelector("nav");
+
+// navBar.nextElementSibling.style.marginTop = navBar.clientHeight + "px";
+
+
+//=============================================================
+
+// getBoundingClientRect()
+
+// const box = document.querySelector("div.box");
+
+// window.addEventListener('scroll', () => {
+//     if(box.getBoundingClientRect().top < window.innerHeight){
+//         box.style.background = 'blue';
+//     }
+// });
+
+//=============================================================
+
+// outerHTML
+
+// const title = document.querySelector("#title");
+
+// console.log(title.outerHTML);
+
+// title.outerHTML = "<h2> I have changed by outerHTML</h2>"
+
+//=============================================================
+
+// querySelector() , querySelectorAll()
+
+// element.querySelector() , element.querySelectorAll()
+
+//=============================================================
+
+// bubbling - child to parent, capturing- parent to child
+
+// const html = document.getElementById('html');
+// const body = document.getElementById('body');
+// const ancestor = document.getElementById('ancestor');
+// const parent = document.getElementById('parent');
+// const child = document.getElementById('child');
+
+// html.addEventListener('click', ()=> {
+//     console.log('I am html');
+// })
+
+// body.addEventListener('click', ()=> {
+//     console.log('I am body');
+// })
+
+// ancestor.addEventListener('click', ()=> {
+//     console.log('I am ancestor');
+// })
+
+// parent.addEventListener('click', ()=> {
+//     console.log('I am parent');
+// })
+
+// child.addEventListener('click', ()=> {
+//     console.log('I am child');
+// })
+
+//=============================================================
+
+// window.parent
+
+//=============================================================
+
+// title
+
+// document.title = "Ekansh";
+
+//=============================================================
+
+// insertAdjacentHTML - beforebegin, afterbegin, beforeend, afterend
+
+// const mypara = document.getElementById("mypara");
+
+// console.log(mypara.innerHTML);
+// const em = mypara.querySelector('em');
+
+// em.addEventListener('click', console.log)
+
+// // mypara.innerHTML += "<strong>Ekansh</strong>" // above event lstener will not work. Dis-advantage of innerHTML.
+
+// // above problem can be resolved by insertAdjacentHTML
+
+// mypara.insertAdjacentHTML('beforeend', '<strong>Ekansh</strong>')
+
+//=============================================================
+
+// insertAdjacentElement - beforebegin, afterbegin, beforeend, afterend
+
+// const area = document.querySelector('#area');
+// const box = document.createElement('div');
+// box.id = 'box';
+
+// box.style.background='red';
+// box.style.height= '100px';
+// box.innerText = 'Adjacent box';
+// box.style.marginBottom = '10px';
+
+// area.insertAdjacentElement('afterend', box);
+
+// insertAdjacentText - beforebegin, afterbegin, beforeend, afterend
+
+//=============================================================
+
+// Element.matches
+
+// const mypara = document.getElementById("mypara");
+
+// // const res = mypara.matches('#mypara')
+// const res = mypara.matches('[data-name]');
+
+// console.log(res);
+
+//=============================================================
+
+// Event delegation - a way to add an event listener once for multiple elements with support for adding extra children
+
+// const mylist = document.getElementById('mylist');
+
+// mylist.addEventListener('click', e => {
+//     const target = e.target;
+
+//     if(target.matches('li')){
+//         target.style.background = 'red';
+//     }
+// });
+
+//=============================================================
+
+// replaceChild
+
+// const mylist = document.getElementById('mylist');
+
+// const oldChild = mylist.children[1];
+
+// const newElement = document.createElement('li');
+// newElement.textContent = "jQuery"
+
+// mylist.replaceChild(newElement, oldChild);
+
+//=============================================================
+
+// append multiple child elements using append()
+// const mydiv = document.getElementById('mydiv');
+
+// const strong = document.createElement('strong');
+// const em = document.createElement('em');
+// const textNode = document.createTextNode("text")
+
+// strong.textContent = "strong";
+// em.textContent = "emphasized";
+
+// mydiv.append(strong, em, textNode , "String")
+
+//=============================================================
+
+// replaceWith()
+
+//=============================================================
+
+// isEqualNode() - test if two nodes are equal, checks for child, properties, spaces and textnodes also.
+
+//=============================================================
+
+// elementFrmPoint()
+
+let pos;
+
+document.addEventListener('mousemove', ({pageX,pageY}) => {
+    pos = `(${pageX},${pageY})`
+})
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

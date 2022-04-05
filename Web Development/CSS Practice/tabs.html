@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            background-color: blueviolet;
+            height: 500px;
+            width: 600px;
+
+        }
+
+        .main .tab-container {
+            margin-bottom: 10px;
+        }
+
+        .main .tab-container button {
+            border: none;
+            outline: none;
+            width: 49%;
+            margin: 0;
+        }
+
+        .tab-panel {
+            /* border: 2px solid black; */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="tab-container">
+            <button onclick="showPanel(0);">Tab 1</button>
+            <button onclick="showPanel(1);">Tab 2</button>
+        </div>
+        <div class="panel-container">
+            <div class="tab-panel">Tab content 1</div>
+            <div class="tab-panel">Tab content 2</div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var tabs = document.querySelectorAll(".main .tab-container button");
+        var panels = document.querySelectorAll(".tab-panel");
+
+        function showPanel(index) {
+            tabs.forEach(tab => {
+                tab.style.backgroundColor = "";
+                tab.style.color = "";
+            });
+
+            tabs[index].style.backgroundColor = "blue";
+            tabs[index].style.color = "white";
+
+
+            panels.forEach(panel => {
+                panel.style.display = "none";
+            });
+
+            panels[index].style.display = "block";
+        }
+
+        showPanel(0);
+
+    </script>
+
+
+
+</body>
+
+</html>

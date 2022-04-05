@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="val"> <button id="add">Add</button><button id="display">Display</button>
+
+    <div id="displayItem"></div>
+
+
+
+
+    <script>
+
+        const testArr = [7,2,3,4,'a','c']
+        const checkIfArray = arr => Array.isArray(arr);
+
+        const arr1 = [1,2,3,"eka","nsh"];
+        const arr2 = "test";
+
+        // console.log(checkIfArray(arr2));
+
+        const cloneArray = arr => [...ar];
+
+        // console.log([12,3,4,5]);
+
+        const returnFirstArrayElements = (arr,n) => n === undefined ? arr.shift() : arr.slice(0, n);
+        const returnLastArrayElements = (arr,n) => n === undefined ? arr.pop() : arr.slice(-n);
+
+        // console.log(returnFirstArrayElements(testArr,3));
+        // console.log(returnLastArrayElements(testArr,2));
+
+        const myColor = ["Red", "Green", "White", "Black"];
+
+        const oneStr = myColor.join('');
+        // console.log(oneStr);
+
+        // 12344562
+        const dashedNumbers = num => {
+            const numArr = num.toString().split('');
+            const result = [];
+            numArr.forEach((x, index) => {
+                if(numArr[index -1] %2 ===0 && numArr[index] %2 ===0){
+                    result.push('-',numArr[index]);
+                }else{
+                    result.push(numArr[index]);
+                }
+            })
+            return result.join('');
+        }
+
+        // console.log(dashedNumbers(1223445));
+
+        const sortArray = arr => {
+            const result = [-Infinity];
+            arr.forEach( (num,index) => {
+                if(result[result.length -1 ] < arr[index]){
+                    result.push(arr[index]);
+                }else{
+                    let x = result.pop();
+                    result.push(arr[index]);
+                    result.push(x);
+                }
+            })
+            return result;
+        }
+
+        // console.log(sortArray([1,4,2,5,-4]));
+
+        const findMostFrequent = arr => {
+            let obj = search(arr);
+            let freqKey,count=0;
+            Object.keys(obj).forEach(key => {
+                if(count < obj[key]){
+                    freqKey = key;
+                }
+            })
+            return freqKey;
+        }
+
+        const search = (arr) => {
+            
+            let obj = {};
+            arr.forEach(val => {
+                if(typeof obj[val] === 'undefined'){
+                    obj[val] = 1;
+                }else{
+                    obj[val] = obj[val] + 1;
+                }
+            });
+            return obj; 
+        }
+
+        //  console.log(findMostFrequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
+        
+        const changeCase = str => str.split('').map(val => val == val.toUpperCase() ? val.toLowerCase() : val.toUpperCase()).join('');
+
+        // console.log('The Quick Brown Fox');
+        // console.log(changeCase('The Quick Brown Fox'));
+
+        const temArr = [];
+
+        const addItems = (ev) => {
+            let inp = document.getElementById('val');
+            temArr.push(inp.value);
+            inp.value = '';
+        }
+
+        document.getElementById('add').addEventListener('click', addItems);
+        
+        document.querySelector('#display').addEventListener('click', (ev) => {
+            const itemsDiv = document.querySelector('#displayItem');
+
+            Array.from(itemsDiv.querySelectorAll('p')).forEach(ele => ele.remove());
+            
+            temArr.forEach((val, index) => {
+                let p = document.createElement('p');
+                p.textContent = `Element ${index} : ${val}`;
+                itemsDiv.append(p);
+            })
+        })
+
+
+        const testArr1 = [1,2,3,1,2,4,5,2,3,4,6,7,7,"abc","ABC"];
+
+        const removeDuplicate = arr => {
+            let uniqueArr = [];
+            arr.forEach(val => {
+                    if(!uniqueArr.includes(val.toString().toUpperCase())){
+                        uniqueArr.push(val.toString().toUpperCase());
+                    }
+            })
+            return uniqueArr;
+        }
+
+        // console.log(removeDuplicate(testArr1));
+
+
+        let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        let o = ["th","st","nd","rd"]
+
+        color.forEach((val, index) => {
+            let ord;
+            if(index % 10 === 1 || index % 10 === 2 || index % 10 === 3) {
+                ord = o[index];
+            }else{
+                ord = o[0];
+            }
+            // console.log(`"${index}${ord} choice is ${val}."`);
+        });
+
+
+        const leapYears = (startYear, endYear) => {
+            for(let i= startYear; i<= endYear; i++){
+                if(i%4===0){
+                    console.log(i);
+                }
+            }
+            return;
+        }
+
+        console.log(leapYears(1997,2021));
+
+
+
+
+    </script>
+</body>
+</html>

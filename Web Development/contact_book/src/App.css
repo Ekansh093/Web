@@ -1,0 +1,73 @@
+html{
+  scroll-snap-type: y mandatory;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+.actions{
+  opacity: 0;
+}
+
+tr:hover .actions{
+  opacity: 1;
+}
+
+.delete-icon:hover{
+  cursor: pointer;
+}
+
+.yt{
+  padding: 20px;
+  background-color: #d00101;
+  color: white;
+}
+
+.yt-list{
+  height: 90vh;
+  overflow: scroll;
+}
+
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiktok-home{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.tik-tok{
+  scroll-snap-type: y mandatory;
+  border: 5px solid black;
+  border-radius: 15px;
+  width: 30vw;
+  height: 80vh;;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: scroll;
+  background-color:black;
+}
+
+.tik-tok::-webkit-scrollbar{
+  display: none;
+}
+
+.video{
+  /* position: relative; */
+  /* border: 2px solid black; */
+  border-radius: 15px;
+  height: 80vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.video__player{
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}

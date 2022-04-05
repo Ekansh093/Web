@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ToDoList</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+  <h1><%=typeOfList%></h1>
+  <div class="box">
+    <form class="" action="/delete" method="post">
+    <table>
+    <% newListItemsData.forEach(function(item){%>
+      <tr>
+        <td><input type="checkbox" onchange="this.form.submit()" name="itemId" value="<%= item.id%>"></td>
+        <td><p><%= item.name%></p></td>
+      </tr>
+    <% }); %>
+  </table>
+  <input type="hidden" name="list" value="<%= typeOfList%>">
+    </form>
+    <form action="/" method="post">
+      <input type="text" name="newItem" placeholder="Enter new item" autofocus required>
+      <button type="submit" name="list" value="<%= typeOfList%>">Add Item</button>
+    </form>
+  </div>
+</body>
+
+</html>

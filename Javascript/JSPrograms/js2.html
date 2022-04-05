@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+ 
+ "use strict"
+
+//  const outerFun = a => {
+//     console.log("outer func");
+
+//     const innerFun = b => {
+//         let sum = a + b
+//         console.log(`sum = ${sum}`);
+//     }
+    
+//     return innerFun;
+//  }
+
+// let inner = outerFun(5);
+// console.dir(inner);
+// inner(6);
+
+
+// let obj1 = {
+//     name: "Ekansh",
+//     age: 27,
+//     myFun : function(gender,addr) {
+//         console.dir(`My name is ${this.name}. My age is ${this.age}. I am a ${gender}. I live in ${addr}`);
+//     }
+// }
+//  let obj2 = {
+//      name: "Ekta",
+//      age: 25
+//  }
+
+// obj1.myFun("Male","vasundhara");
+// obj1.myFun.call(obj2, "Female", "vasundhara")
+
+// obj1.myFun.apply(obj2, ["Male","vasundhara"])
+
+// const arr = [1,2,3,4,5,6]
+// let max = Math.max.apply(null, arr)
+// console.log(max);
+
+
+// let obj1 = {
+//      name: "Ekansh",
+//      age: 27
+//  }
+
+//  let obj2 = {
+//      name: "Ekta",
+//      age: 25
+//  }
+
+//  let obj3 = {
+//      name: "Deu",
+//      age: 30
+//  }
+
+
+// function fun() {
+//     console.log(`My name is ${this.name}. My age is ${this.age}.`);
+// }
+
+// let ob1 = fun.bind(obj1);
+// ob1();
+
+
+// let obj1 = {
+//     name: "Ekansh",
+//     age: 27,
+//     gender: "Male",
+//     ticketattr : ["name", "age", "gender"]
+// }
+
+// let obj2 ={}
+
+// let arr = obj1.ticketattr
+
+// arr.forEach(val => obj2[val] = obj1[val]);
+
+// console.log(obj2);
+
+// setTimeout(() => console.log("timeout"),3000);
+
+// console.log("ekansh");
+
+const str = "My name is Ekansh"
+
+let reverseStr = str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
+
+console.log(reverseStr);
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>

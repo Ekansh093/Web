@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navigation Bar</title>
+    <style media="screen">
+      .nav-bar {
+        background-color: black;
+        padding: 1px;
+        border-radius: 5px;
+      }
+      .nav {
+        float: left;
+        list-style: none;
+        margin: 5px 10px;
+      }
+      .nav-bar ul{
+        overflow: auto;
+      }
+      .nav-bar li a {
+        text-decoration: none;
+        color: white;
+        font-family: sans-serif;
+      }
+      .search input{
+        float: right;
+        width: 200px;
+        margin: 2px 100px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="nav-bar">
+        <ul>
+          <li class="nav">
+            <a href="https://www.google.com" target="_blank">Home</a>
+          </li>
+          <li class="nav">
+            <a href="#">About</a>
+          </li>
+          <li class="nav">
+            <a href="#">Services</a>
+          </li>
+          <li class="nav">
+            <a href="#">Contact Us</a>
+          </li>
+          <div class="search">
+            <input type="text" name="search" value="" placeholder="Type here..">
+          </div>
+        </ul>
+      </div>
+    </header>
+  </body>
+</html>

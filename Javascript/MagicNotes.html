@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Notes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <h1 style="text-align: center;margin-top: 10px;">Welcome to magic notes</h1>
+    <div class="card container">
+        <div class="card-body">
+            <h5 class="card-title">Enter a Note</h5>
+            <div class="form-group">
+                <input id="noteTitle" class="form-control" type="text" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <input id="addTxt" class="form-control form-control-lg" type="text" required>
+            </div>
+            <button  id="addBtn" class="btn btn-primary">Add Note</button>
+        </div>
+    </div>
+    <div class="container">
+        <hr>
+        <h2>Your notes</h2>
+        <hr>
+        <div id="notes" class="row container-fluid"></div>
+        
+
+    </div>
+
+
+    <script src="/js/12magicNotes.js"></script>
+</body>
+
+</html>

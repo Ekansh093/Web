@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: chocolate;
+            display: grid;
+            grid-template-columns: auto auto;
+            /* padding: 13px; */
+            justify-content: space-evenly;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* .container {
+            display: flex;
+            background-color: chocolate;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding: 13px;
+            box-sizing: border-box;
+        } */
+
+        .item {
+            width: 45vw;
+            height: 45vw;
+            background-color: blueviolet;
+            border: 2px solid red;
+            margin-top: 5px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">4</div>
+    </div>
+
+    <script>
+
+        function abc() {
+            return new Promise(function (resolve, reject) {
+                reject("Ekansh");
+            });
+
+        }
+
+        abc().then(res => console.log(res)).catch(err => console.log(err))
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/home.css">
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") -%>
+    <div class="container">
+      <div class="heading">
+        <h1><%= heading%></h1>
+      </div>
+      <div class="subHeading">
+        <h2><%= subHeading%></h2>
+      </div>
+      <div class="content">
+        <div class="image border">
+          <img src="<%= imgUrl%>" alt="">
+        </div>
+        <div class="description border">
+          <p><%= content%></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <%- include("./partials/footer.ejs") -%>
+  </body>
+</html>

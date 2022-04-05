@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+
+    <script>
+
+        let obj = {
+            init: function() {
+                document.getElementById("btn").addEventListener('click', this);
+                document.getElementById("btn").addEventListener('focus', this);
+                document.getElementById("btn").addEventListener('blur', this);
+            },
+            handleEvent: function(ev) {
+                switch (ev.type) {
+                    case 'click':
+                        this.doSomething(ev);
+                        break;
+                    case 'focus':
+                        this.doSomething(ev);
+                        break;    
+                
+                    case 'blur':
+                        this.doSomething(ev);    
+                        break;
+                }
+            },
+            doSomething: function(ev){
+                console.log('button clicked- ' + ev.type);
+            }
+        }
+
+        obj.init();
+    </script>
+</body>
+</html>

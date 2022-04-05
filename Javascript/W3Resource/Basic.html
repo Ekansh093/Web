@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="heading"></h1>
+
+
+<script>
+
+// 1. Write a JavaScript program to display the current day and time in the following format.
+
+let dayList = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+let today = new Date();
+let prefix = today.getHours < 12 ? 'AM' : 'PM'
+// console.log(`today is ${dayList[today.getDay()]}`);
+// console.log(`current time is ${today.getHours() % 12 } ${prefix} : ${today.getMinutes()} : ${today.getSeconds()}`);
+
+
+//2. Write a JavaScript program to print the contents of the current window.
+
+function printContent(){
+    window.print();
+}
+// printContent();
+
+//3. Write a JavaScript program to get the current date.  Go to the editor
+// Expected Output :
+// mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+
+function getCurrentDate(){
+    let today = new Date();
+    let dd = today.getDate() < 10 ? '0' + today.getDate() : today.getDate();
+    let mm = today.getMonth() + 1< 10 ? '0' + today.getMonth() + 1 : today.getMonth() + 1;
+    let yyyy = today.getFullYear();
+    console.log(`current time is ${dd}/${mm}/${yyyy}`);
+}
+
+// getCurrentDate();
+
+const areaOfTriangle = (s1,s2,s3) => {
+    let s = (s1+s2+s3)/2;
+    let area = Math.sqrt(s * (s-s1) * (s-s2) * (s-s3));
+    return area;
+}
+
+// console.log(`Area of triangle = ${areaOfTriangle(5,6,7)}`);
+
+// 5. Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.
+
+function rotateString(str){
+    let arr = str.split('');
+
+    setInterval(()=>{
+        let x = arr.pop();
+        arr.unshift(x);
+        console.log(arr.join(''));
+    }, 1000);
+}
+
+// rotateString("w3resource");
+
+//8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
+
+function guess() {
+    let input = prompt('Enter a number');
+    let elem = document.getElementById('heading');
+    if(input >=1 && input <=10) 
+        elem.textContent = 'Matched';
+    else
+        elem.textContent = 'Not matched';
+}
+
+// guess();
+
+//10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+
+function calculate(){
+
+    function setMarkUp(){
+        let inpDiv1 = document.createElement('div');
+        let label1 = document.createElement('label');
+        let input1 = document.createElement('input');
+        label1.textContent = 'Number 1: ';
+        inpDiv1.append(label1,input1);
+        let inpDiv2 = document.createElement('div');
+        let label2 = document.createElement('label');
+        let input2 = document.createElement('input');
+        label2.textContent = 'Number 2: ';
+        inpDiv2.append(label2,input2);
+        let multiply = document.createElement('button');
+        multiply.type = 'submit';
+        multiply.textContent = 'MULTIPLY';
+        let divide = document.createElement('button');
+        divide.type = 'submit';
+        divide.textContent = 'DIVIDE';
+        let br1 = document.createElement('br');
+        let br2 = document.createElement('br');
+        let result = document.createElement('h3');
+        document.body.append(inpDiv1,br1,inpDiv2,br2,multiply,divide,result)
+
+        multiply.addEventListener('click', (e)=> {
+            if(input1.value == '' || input2.value ==''){
+                alert('Enter both values');
+            }else{
+                const res = input1.value * input2.value;
+                result.textContent = `Result is :${res}`;
+            }
+        });
+
+        divide.addEventListener('click', (e)=> {
+            if(input1.value == '' || input2.value ==''){
+                alert('Enter both values')
+            }else{
+                const res = input1.value / input2.value;
+                result.textContent = `Result is :${res}`;
+            }
+        });
+    }
+
+    setMarkUp();
+}
+
+// calculate();
+
+
+// Write a JavaScript program to get the website URL (loading page).
+
+// console.log(document.URL);
+
+let name = "Ekta"
+
+const Example = function(name, age) {
+  //  this.name = "Ekansh";
+
+    function change(){
+        console.log(this.name);       
+    }
+    change();
+}
+
+let obj1 =  Example('Ekansh',27);
+
+
+// let obj2 = new Example('Ekta',25);
+
+// console.log(obj1.name);
+// console.log(obj2.age);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>    
+</body>
+</html>

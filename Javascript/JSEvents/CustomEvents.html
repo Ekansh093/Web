@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add">ADD</button>
+    <button id="remove">REMOVE</button>
+
+    <script>
+
+        let createPara = new CustomEvent('createPara', {detail : Date.now()})
+        let removePara = new CustomEvent('removePara', {detail : Date.now()})
+        
+        const add = document.getElementById('add');
+        const remove = document.getElementById('remove');
+        
+        add.addEventListener('createPara', (ev)=>{
+            let p = document.createElement('p');
+            p.textContent = 'This is a new para.'
+            document.body.append(p);
+        });
+
+        remove.addEventListener('removePara', (ev) => {
+            const arr = Array.from(document.querySelectorAll('p'));
+            console.log(arr);
+            arr[arr.length-1].remove();
+        })
+
+        add.addEventListener('click', (ev) => {
+            add.dispatchEvent(createPara);
+        })
+
+        remove.addEventListener('click', (ev) => {
+            remove.dispatchEvent(removePara);
+        })
+
+        
+
+    </script>
+
+</body>
+</html>

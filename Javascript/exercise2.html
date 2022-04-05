@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">This is a heading</h1>
+
+    <script>
+        let elem1 = document.createElement("div");
+        elem1.className = "editDiv";
+        elem1.innerText = "This is an editable div"
+        console.log(elem1);
+        document.querySelector("body").appendChild(elem1);
+        console.log(document.querySelector("body"));
+
+        document.querySelector(".editDiv").addEventListener("click", function (e) {
+                let elem1 = document.createElement("input");
+                elem1.setAttribute("type", "text");
+                elem1.id = "textId";
+                document.querySelector(".editDiv").appendChild(elem1);
+        });
+        
+        document.querySelector(".editDiv").addEventListener("blur", function (e) {
+            document.getElementById("textId").remove();
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* #nav{
+  position: relative;
+} */
+
+.nav-bar::before{
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.nav-bar{
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  opacity: 0.8;
+}
+
+.nav-bar img{
+  width: 7rem;
+  height: 4rem;
+  margin: 10px 10px;
+}
+
+.nav-bar ul{
+  display: flex;
+}
+
+.nav-bar ul li{
+  list-style: none;
+}
+
+.nav-bar ul li a{
+  color: white;
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+
+}
+
+.nav-bar ul li a:hover{
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+#home::before{
+  background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 330px;
+  z-index: -1;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+}
+
+#home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 250px;
+}
+
+#home p{
+  text-align: center;
+}
+
+
+.btn{
+  display: block;
+  padding: 10px;
+  border: 2px solid white;
+  background-color: #e3581e;
+  border-radius: 25px;
+  font-size: 20px;
+}
+
+.btn:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#sub-heading{
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.service-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+.service{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+  margin: 10px 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.service img{
+  width: 200px;
+  height: 150px;
+}

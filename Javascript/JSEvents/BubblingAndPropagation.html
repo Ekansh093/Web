@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a,.b,.c{
+            border: 2px solid black;
+            background-color: blue;
+        }
+        .a{
+            height: 500px;
+            width: 500px;
+        }
+        .b{
+            height: 400px;
+            width: 400px;
+        }
+        .c{
+            height: 300px;
+            width: 300px;
+        }
+        .col{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="a">
+    <div class="b">
+        <div class="c">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+
+const a = document.querySelector(".a");
+const b = document.querySelector(".b");
+const c = document.querySelector(".c");
+
+
+b.addEventListener("click", addColor)
+a.addEventListener("click", addClass)
+
+function addClass(ev){
+    console.log(ev);
+    // ev.stopPropagation();
+    ev.target.classList.add("col");
+}
+
+function addColor(ev){
+    console.log(ev);
+    ev.stopPropagation();
+    ev.target.style["background-color"] = "black";
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<script>
+"use strict"
+// map()
+
+// const arr = [1,2,3,4,5];
+
+// const arr1 = arr.map(multiply);
+// const arr2 = arr.map(multiplyByIndex);
+
+// console.log(arr1);
+// console.log(arr2);
+
+// function multiply(value){
+//     return value * 2;
+// }
+
+// function multiplyByIndex(value, index){
+//     return value * index;
+// }
+
+
+// const products = [
+//     {
+//         item: "laptop1",
+//         price: 2000,
+//         count: 3
+//     },
+//     {
+//         item: "laptop2",
+//         price: 3000,
+//         count: 4
+//     },
+//     {
+//         item: "laptop3",
+//         price: 5000,
+//         count: 6
+//     }
+// ];
+
+// const obj1 = products.map(item => item.price * item.count)
+// console.log(obj1);
+
+// const obj2 = products.map(item => {
+//     return {
+//         itemName: item.item, 
+//         totalPrice: item.price * item.count
+//     }
+// })
+
+// console.log(obj2);
+
+// const stringArr = ['1','2','3','4','5']
+
+// // const obj3 = stringArr.map(n => Number(n))
+
+// const obj3 = stringArr.map(Number).map(n=> n*2).map(String)
+
+// console.log(obj3);
+
+//===================================================================
+
+// filter()
+
+// const arr = [1,2,3,4,5,6]
+
+// const evenArr = arr.filter(n => n % 2 === 0)
+// console.log(evenArr);
+
+// const obj = [
+//     {
+//         name: "Ekansh",
+//         age: 27
+//     },
+//     {
+//         name: "Ekta",
+//         age: 25
+//     },
+//     {
+//         name: "Dhruv",
+//         age: 12
+//     }
+// ];
+
+// const adultArr = obj.filter(ob => ob.age>18)
+// console.log(adultArr);
+
+// const arr1 = [1,2,3,4,1,4,3,2,5,6]
+
+// const uniqueArr = arr1.filter((value,index,array) => {
+//     return array.indexOf(value) === index
+// })
+
+// console.log(uniqueArr);
+
+// const duplicateValueArr = arr1.filter((value,index,array) => {
+//     return array.indexOf(value) !== index
+// })
+
+// console.log(duplicateValueArr);
+
+// const nonRepeatingArr = arr1.filter((value,index,array) => {
+//     return array.indexOf(value) === array.lastIndexOf(value)
+// })
+// console.log(nonRepeatingArr);
+
+//===================================================================
+
+// reduce()
+
+// const arr = [1,2,3,4,5];
+
+// const sumOfNum = arr.reduce(sum, 0); // 0 -> initial value of accumulator. Iits is given then initial value will be first element of arr
+
+// function sum(acc, value, index, arr){
+//     return acc + value;
+// }
+
+// console.log(sumOfNum);
+
+// const max = arr.reduce(callback, -Infinity);
+
+// function callback(acc, value){
+//     return acc > value ? acc : value
+// }
+
+// console.log(max);
+
+// const products = [
+//     {
+//         item: "laptop1",
+//         price: 2000,
+//         count: 3
+//     },
+//     {
+//         item: "laptop2",
+//         price: 3000,
+//         count: 4
+//     },
+//     {
+//         item: "laptop3",
+//         price: 5000,
+//         count: 6
+//     }
+// ];
+
+// const obj1 = products.reduce((acc, item) => acc + item.price * item.count,0)
+
+// console.log(obj1);
+
+//===================================================================
+
+// slice() - will not change the original array
+
+// const arr = [1,2,3,4,5]
+
+// let obj = arr.slice(2) // [3,4,5]   by default starting index is 0
+// obj = arr.slice(1,3) //-> [2,3]
+// obj = arr.slice(-3) //[3,4,5]
+
+// console.log(obj);
+//===================================================================
+
+// splice() - will change the original array
+
+// const numbers = [1,2,3,4,5];
+
+// // const deleted = numbers.splice(0,2) // [1,2]
+// // const deleted = numbers.splice(2,4) // [3,4,5]
+// const deleted = numbers.splice(2,0,6,7) // 
+
+
+// console.log(numbers);
+// console.log(deleted);
+
+//===================================================================
+
+// sort() -> sorts according to string value using utf-8, will change the original array
+
+// const arr = ["xyz","pqr" ,"mno","abc"]
+
+// arr.sort();
+// console.log(arr);
+
+// const arr1 = [4,3,15,22,7,6,49,0]
+
+// arr1.sort(sortNum);
+
+// function sortNum(a,b){
+//     return a-b;            // >0 - b comes first, <0 - a comes first, =0 - nothing will change
+// }
+
+// console.log(arr1);
+
+
+// const products = [
+//     {
+//         item: "laptop1",
+//         price: 8000,
+//         count: 3
+//     },
+//     {
+//         item: "laptop2",
+//         price: 3000,
+//         count: 4
+//     },
+//     {
+//         item: "laptop3",
+//         price: 5000,
+//         count: 6
+//     }
+// ];
+
+// products.sort((a,b) => b.price - a.price);
+
+// console.log(products);
+
+
+//===================================================================
+
+// concat - will not change the original array
+
+// const a = [1,2,3];
+// const b = [4,5,6];
+
+// const d = a.concat(b);
+// const e = a.concat(10,11,b)
+
+// console.log(e);
+
+//===================================================================
+
+// fill() - changes all the elements as per given value
+
+// const arr = [1,2,3,4,5]
+
+// arr.fill(1);
+
+// console.log(arr);
+
+// function createArray(n) {
+//     return Array(n).fill(0).map((_, idx) => idx+1)
+// }
+
+// console.log(createArray(10));
+
+//===================================================================
+
+// includes() 
+
+// const arr = [1,2,3,4]
+
+// console.log(arr.includes(2));
+// console.log(arr.includes(5));
+
+//===================================================================
+
+// join()
+
+// const arr = ["Apple","Mango","Orange"]
+
+// let str = arr.join();
+// console.log(str);
+
+
+//===================================================================
+
+// reverse() - changes original array
+
+// const arr = [1,2,3,4,5]
+
+// const arr1 = arr.concat().reverse();   // this will not change the original array
+
+// console.log(arr1);
+
+// const str = "Coding is fun!"
+
+// const res = str.split('').reverse().join('');
+// console.log(res);
+
+
+//===================================================================
+
+// push() - push elements at the last. It return the length of new array
+
+// const arr = [1,2,3]
+
+// const len = arr.push(4,5,6)
+
+// console.log(arr);
+// console.log(len);
+
+//===================================================================
+
+// pop() - pop element from last . It returns the removed element
+
+// const arr = [1,2,3]
+
+// const ele = arr.pop();
+
+// console.log(arr);
+// console.log(ele);
+
+//===================================================================
+
+// unshift() - will add element to the starting of array. It return length of new array
+
+// const arr = [1,2,3]
+
+// const len = arr.unshift(4,5,6)
+
+// console.log(arr);
+// console.log(len);
+
+//===================================================================
+
+// shift() - pop element from start . It returns the removed element
+
+// const arr = [1,2,3]
+
+// const ele = arr.shift();
+
+// console.log(arr);
+// console.log(ele);
+
+//===================================================================
+
+// indexOf() and lastIndexOf()
+
+
+//===================================================================
+
+// every() - checks for a given condition for all the elements. Return false immediately for a falsy value
+
+// const arry = [1,2,3,4,5]
+
+// const res = arry.every(isPositive);
+
+// function isPositive(value, index, arr){
+//     return value > 0
+// }
+
+// console.log(res);
+
+// const arr1 = [
+//     {
+//         name: ""
+//     },
+//     {
+//         name: ""
+//     },
+//     {
+//         name: ""
+//     },
+//     {
+//         surname: ""
+//     }
+// ];
+
+// const res = arr1.every(arr => arr.name !== undefined) // check if name property s present in all objects
+
+// console.log(res);
+
+// const array1 =[
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9],
+//     ""
+// ]
+
+// const res = array1.every(arr => Array.isArray(arr))
+// console.log(res);
+
+//===================================================================
+
+// some() - checks for a given condition on all elements and returns true if any one value return true
+
+// const arr = [1,2,3,4,5]
+
+// const res = arr.some(greaterThanFour)
+
+// function greaterThanFour(value){
+//     return value>4
+// }
+
+// console.log(res);
+
+//===================================================================
+
+// find() - finds an element in the array and returns the element
+// findIndex() - returns index
+
+// const arr = [
+//     {
+//         name: "Ekansh",
+//         age: 27
+//     },
+//     {
+//         name: "Ekta",
+//         age: 25
+//     },
+//     {
+//         name: "Dhruv",
+//         age: 12
+//     }
+// ];
+
+// const res = arr.find(findName);
+
+// function findName(value){
+//     return value.name === "Ekansh"
+// }
+
+// console.log(res);
+
+
+// const res1 = arr.findIndex(findName);
+
+// function findName(value){
+//     return value.name === "Ekta"
+// }
+
+// console.log(res1);
+
+//===================================================================
+
+// from() - creates an array from an another array
+
+// const str = "123456"
+
+// const res = Array.from(str, x => Number(x))
+// // const res = Array.from(str, Number)
+
+// console.log(res);
+
+// const arr = [1,2,3,4,1,2,3,5,6,3]
+
+// const res1 = Array.from(new Set(arr));
+
+// console.log(res1);
+
+//===================================================================
+// Array.isArray()
+
+//===================================================================
+
+// flat() - converts a nested array into a flat array
+
+const arr = [1,[2,[3,[4,[5]]]]]
+
+// const res = arr.flat(); //by default value is 1
+
+const res = arr.flat(Infinity);
+
+console.log(res);
+
+
+</script>

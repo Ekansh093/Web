@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animation</title>
+  </head>
+  <style media="screen">
+    .container{
+      background-color: yellowgreen;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      position: relative;
+      animation-name: box2;
+      animation-duration: 5s;
+      animation-iteration-count: 2;
+      /* animation-fill-mode: forwards; */
+      /* animation-direction: alternate; */
+    }
+
+    @keyframes box1 {
+      from{
+        width: 200px;
+      }
+      to{
+        width: 1000px;
+      }
+    }
+
+    @keyframes box2 {
+      0%{
+        top: 0px;
+        left: 0px;
+      }
+      25%{
+        top: 200px;
+        left: 0px;
+      }
+      75%{
+        top: 200px;
+        left: 200px;
+      }
+      100%{
+        top: 0px;
+        left: 20  0px;
+      }
+    }
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">
+
+      </div>
+    </div>
+  </body>
+</html>

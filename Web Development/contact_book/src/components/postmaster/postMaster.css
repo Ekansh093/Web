@@ -1,0 +1,131 @@
+.pm-title{
+    text-align: center;
+    font-weight: bolder;
+    color:#2c3e50;
+    margin-bottom: 10px;
+}
+
+.pm-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+.field{
+    display: flex;
+    width: 70%;
+    /* border: 2px solid black; */
+    color: #34495e;
+    font-weight: bold;
+    margin: 5px 0;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.field-child{
+    display: flex;
+}
+
+.field-options{
+    margin-right: 15px;
+}
+
+.field-name{
+    width: 100px;
+}
+
+.requestType{
+    margin-right: 5px;
+}
+
+.url{
+    width: 100%;
+}
+
+input, textarea, button{
+    outline: none;
+}
+
+textarea{
+    width: 100%;
+}
+
+.send, .addParam{
+    background-color: #2980b9;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.send{
+    margin-bottom: 30px;
+}
+
+.addParam{
+    width: 50px;
+    /* margin-left: 5px; */
+}
+
+.params-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.params{
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.paramKey{
+    margin-right: 5px;
+}
+
+/* .paramKey, .paramValue{
+    width: 50%;
+} */
+
+.statusCode{
+    /* position: absolute;
+    right: 280px; */
+    color: #27ae60;
+    margin-top: 30px;
+}
+
+.response{
+    margin-top: 10px;
+    position: relative;
+}
+
+.resArea{
+    background-color: #2c3e50;
+    color: #27ae60;
+    overflow: scroll;
+    height: 500px;
+}
+
+.statusCode{
+    position: absolute;
+    top: -55px;
+    right: 0;
+    margin-bottom: 5px;
+}
+
+.clipboard, .tooltip{
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.clipboard:hover{
+    cursor: pointer;
+}
+
+.tooltip{
+    color: tomato;
+    font-size: larger;
+}

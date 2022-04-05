@@ -1,0 +1,28 @@
+.nav{
+  background-color: black;
+  margin-top: 0;
+  width: 100%;
+  /* position: fixed; */
+}
+
+ul{
+  display: flex;
+}
+
+li{
+  list-style: none;
+}
+a{
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+a:hover{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}

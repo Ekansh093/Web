@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Submitting form using PUG</title>
+    style
+        include ../static/style.css
+  </head>
+
+  <body>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="fill-form">
+      <form action="/" method="post" id="form">
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="text" name="age" placeholder="Enter your age">
+        <textarea name="address" rows="8" cols="80" placeholder="Enter you address"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

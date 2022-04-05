@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+}
+
+.nav-bar{
+  flex-direction: column;
+}
+
+#home::before{
+  height: 535px;
+}
+
+#home{
+  padding: 3px 10px;
+  height: 370px;
+}
+
+h1{
+  font-size: 25px;
+}
+
+.services{
+}
+
+.service-item{
+  flex-direction: column;
+}
+
+.service{
+}

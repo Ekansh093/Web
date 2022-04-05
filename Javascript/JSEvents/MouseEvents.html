@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 2px solid black;
+            padding: 100px;
+        }
+        p{
+            margin-top: 50px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A perspiciatis omnis molestias hic illo itaque eligendi veniam rem, suscipit sit dolor sapiente nihil dicta culpa tenetur amet unde vero sed?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odio facere itaque. Tempore similique, perferendis a vero harum, tempora delectus, ut nisi beatae odit libero eius autem ea nesciunt quam.</p>
+    </div>
+
+    <script>
+        // mouseenter, mouseleave, mouseover, mouseout. mousemove
+        // mouseenter, mouseleave - do not bubble out
+        document.querySelector(".main").addEventListener('mouseover', doSomething);
+        document.querySelector(".main").addEventListener('mouseout', doSomething);
+
+        function doSomething(ev){
+            // console.log(ev.type);
+            if(ev.relatedTarget){
+                console.log(ev.target.tagName + " looses focus");
+            }
+        }
+    </script>
+</body>
+</html>

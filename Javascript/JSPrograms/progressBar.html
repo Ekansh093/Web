@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .progress-bar{
+        width: 600px;
+        height: 50px;
+        border: 2px solid black;
+        position: relative;
+    }
+    .progress-bar-fill{
+        background: blueviolet;
+        height: 100%;
+        width: 65%;
+        transition: width 0.5s;
+    }
+    .progress-bar-value{
+        position: absolute;
+        z-index: 99;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
+
+<body>
+    
+
+<div class="progress-bar">
+    <div class="progress-bar-value">65%</div>
+    <div class="progress-bar-fill"></div>
+</div>
+
+
+<script>
+
+    class ProgressBar{
+
+        constructor(element, initialValue=0){
+            this.fillElement = element.querySelector('div.progress-bar-fill');
+            this.valueElement = element.querySelector('div.progress-bar-value');
+            this.setValue(initialValue);
+        }
+
+        setValue(finalValue){
+            if(finalValue < 0){
+                this.value = 0
+            }
+            if(finalValue > 100){
+                this.value = 100
+            }
+            this.value = finalValue;
+            const percentage = this.value + '%';
+            this.updateValue(percentage);
+        }
+
+        updateValue(percentage){
+            this.fillElement.style.width = percentage;
+            this.valueElement.textContent = percentage;
+        }
+
+    }
+
+
+const pb = new ProgressBar(document.querySelector('div.progress-bar'), 85)
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
